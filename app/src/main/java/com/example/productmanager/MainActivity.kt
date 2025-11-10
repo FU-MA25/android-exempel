@@ -6,6 +6,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.ListView
 import android.widget.Spinner
 import android.widget.Toast
@@ -41,6 +42,8 @@ class MainActivity : AppCompatActivity() {
         listView = findViewById(R.id.lv_products)
         editText = findViewById(R.id.et_product)
         button = findViewById(R.id.btn_add_product)
+
+
 
 
 
