@@ -33,10 +33,18 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinner_category"/>
 
-    <include layout="@layout/custom_input_card"
-        android:id="@+id/custom_input_top"/>
-    <include layout="@layout/custom_input_card"
-        android:id="@+id/custom_input_bottom"/>
+    <com.example.productmanager.CustomCardInput
+        android:id="@+id/custom_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonText="add"
+        app:hintText="skriv ett namn"
+        app:titleText="min input" />
+
+<!--    <include layout="@layout/custom_input_card"-->
+<!--        android:id="@+id/custom_input_top"/>-->
+<!--    <include layout="@layout/custom_input_card"-->
+<!--        android:id="@+id/custom_input_bottom"/>-->
 
 
 

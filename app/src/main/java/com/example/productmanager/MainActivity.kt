@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editTextTop: EditText
     private lateinit var editTextBottom: EditText
 
+    private lateinit var customCardInput: CustomCardInput
+
 
     private lateinit var listViewAdapter: ArrayAdapter<String>
 
@@ -46,20 +48,28 @@ class MainActivity : AppCompatActivity() {
 
         spinner = findViewById(R.id.spinner_category)
         listView = findViewById(R.id.lv_products)
+        customCardInput = findViewById(R.id.custom_input)
+
+        customCardInput.setOnButtonClick {
+            val editText = customCardInput.findViewById<EditText>(R.id.et_product)
+            addItem(editText)
+        }
+
+
 //        editText = findViewById(R.id.et_product)
 //        button = findViewById(R.id.btn_add_product)
 
-        topInputCArd = findViewById(R.id.custom_input_top)
-        bottomInputCard = findViewById(R.id.custom_input_bottom)
+//        topInputCArd = findViewById(R.id.custom_input_top)
+//        bottomInputCard = findViewById(R.id.custom_input_bottom)
 
-        editTextTop = topInputCArd.findViewById(R.id.et_product)
-        editTextBottom = bottomInputCard.findViewById(R.id.et_product)
+//        editTextTop = topInputCArd.findViewById(R.id.et_product)
+//        editTextBottom = bottomInputCard.findViewById(R.id.et_product)
 
-        val inputTitleTop = topInputCArd.findViewById<TextView>(R.id.tv_input_title)
-        val inpuTitleBottom = bottomInputCard.findViewById<TextView>(R.id.tv_input_title)
-
-        inputTitleTop.text = "jag är uppe"
-        inpuTitleBottom.text = "jag är nere"
+//        val inputTitleTop = topInputCArd.findViewById<TextView>(R.id.tv_input_title)
+//        val inpuTitleBottom = bottomInputCard.findViewById<TextView>(R.id.tv_input_title)
+//
+//        inputTitleTop.text = "jag är uppe"
+//        inpuTitleBottom.text = "jag är nere"
 
 
 
@@ -93,15 +103,6 @@ class MainActivity : AppCompatActivity() {
 
         // =========== add button ============
 
-        val topButton = topInputCArd.findViewById<Button>(R.id.btn_add_product)
-        val bottomButton = bottomInputCard.findViewById<Button>(R.id.btn_add_product)
-
-        topButton.setOnClickListener {
-            addItem(editTextTop)
-        }
-        bottomButton.setOnClickListener {
-            addItem(editTextBottom)
-        }
 
 //        button.setOnClickListener {
 //            addItem()
